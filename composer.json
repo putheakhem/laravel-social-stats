@@ -1,0 +1,58 @@
+{
+  "name": "putheakhem/laravel-social-stats",
+  "description": "Fetch follower/subscriber stats from various social media platforms.",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Puthea Khem",
+      "email": "puthea.khem@gmail.com"
+    }
+  ],
+  "homepage": "https://github.com/putheakhem/laravel-social-stats",
+  "keywords": ["laravel", "social", "telegram", "youtube", "facebook", "statistics", "followers"],
+  "type": "library",
+  "autoload": {
+    "psr-4": {
+      "PutheaKhem\\LaravelSocialStats\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "tests/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "PutheaKhem\\LaravelSocialStats\\SocialStatsServiceProvider"
+      ],
+      "aliases": {
+        "SocialStats": "PutheaKhem\\LaravelSocialStats\\Facades\\SocialStats"
+      }
+    }
+  },
+  "require": {
+    "php": ">=8.2",
+    "illuminate/support": "^12.0",
+    "guzzlehttp/guzzle": "^7.0"
+  },
+  "require-dev": {
+    "mockery/mockery": "^1.5",
+    "orchestra/testbench": "^7.7|^8.0|^9.0|^10.0",
+    "pestphp/pest": "^1.23|^2.1|^3.1",
+    "laravel/pint": "^1.18",
+    "phpstan/phpstan": "^1.12.16",
+    "rector/rector": "^1.2.10",
+    "symfony/var-dumper": "^7.2.0"
+  },
+  "scripts": {
+    "test": "pest"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "config": {
+    "allow-plugins": {
+      "pestphp/pest-plugin": true
+    }
+  }
+}
