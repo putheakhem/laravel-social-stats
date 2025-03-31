@@ -1,6 +1,7 @@
 # Laravel Social Stats
 
 [![Latest Version](https://img.shields.io/packagist/v/putheakhem/laravel-social-stats.svg?style=flat-square)](https://packagist.org/packages/putheakhem/laravel-social-stats)
+[![License](https://img.shields.io/github/license/putheakhem/laravel-social-stats.svg?style=flat-square)](LICENSE)
 
 > A Laravel package to fetch follower/subscriber counts from various social media platforms including Telegram, YouTube, and Facebook Pages.
 
@@ -42,6 +43,8 @@ Set the following in `.env`:
 YOUTUBE_API_KEY=your_youtube_api_key
 FACEBOOK_ACCESS_TOKEN=your_facebook_access_token
 TELEGRAM_BOT_TOKEN=your_telegram_bot_token
+INSTAGRAM_ACCESS_TOKEN=your_instagram_access_token
+INSTAGRAM_BUSINESS_ID=your_instagram_business_account_id
 ```
 
 ---
@@ -67,16 +70,17 @@ $count = SocialStats::platform('facebook')->fetchCount('your_page_id'); // Page 
 
 ## ✅ Supported Platforms
 
-- ✅ Telegram
-- ✅ YouTube
+- ✅ Telegram Channels
+- ✅ YouTube Channels
 - ✅ Facebook Pages
-- 🔜 Instagram, TikTok (planned)
+- ✅ Instagram Business Accounts
+-  Instagram, TikTok (planned)
 
 ---
 
 ## 🔪 Testing
 
-To run tests (if available):
+To run tests:
 
 ```bash
 composer test

@@ -23,6 +23,7 @@ final class YouTubeStatService implements SocialMediaStatService
         $count = Cache::flexible($cacheKey, [18000, 3600], function () use ($channelId): int {
             return $this->getSubscriberCountFromApi($channelId);
         });
+
         return $count;
     }
 

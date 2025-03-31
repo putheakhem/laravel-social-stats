@@ -12,4 +12,8 @@ return [
     'telegram' => [
         'bot_token' => env('TELEGRAM_BOT_TOKEN'),
     ],
+    'instagram' => [
+        'access_token' => env('INSTAGRAM_ACCESS_TOKEN'),
+        'business_id' => env('INSTAGRAM_BUSINESS_ID'),
+    ],
 ];
