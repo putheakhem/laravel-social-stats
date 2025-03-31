@@ -20,7 +20,7 @@ final class TikTokStatService implements SocialMediaStatService
             $username = $configUsername;
         }
 
-        if (! is_string($username) || trim($username) === '') {
+        if (! is_string($username) || mb_trim($username) === '') {
             Log::warning('[TikTokStatService] Missing or invalid TikTok username.');
 
             return 0;
