@@ -9,6 +9,7 @@ use PutheaKhem\LaravelSocialStats\Contracts\SocialMediaStatService;
 use PutheaKhem\LaravelSocialStats\Services\FacebookStatService;
 use PutheaKhem\LaravelSocialStats\Services\InstagramStatService;
 use PutheaKhem\LaravelSocialStats\Services\TelegramStatService;
+use PutheaKhem\LaravelSocialStats\Services\TikTokStatService;
 use PutheaKhem\LaravelSocialStats\Services\YouTubeStatService;
 
 final class SocialMediaStatManager
@@ -20,6 +21,7 @@ final class SocialMediaStatManager
             'youtube' => new YouTubeStatService,
             'facebook' => new FacebookStatService,
             'instagram' => new InstagramStatService,
+            'tiktok' => new TikTokStatService,
             default => throw new InvalidArgumentException("Unsupported platform: {$platform}"),
         };
     }
