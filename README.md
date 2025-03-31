@@ -44,7 +44,7 @@ YOUTUBE_API_KEY=your_youtube_api_key
 FACEBOOK_ACCESS_TOKEN=your_facebook_access_token
 TELEGRAM_BOT_TOKEN=your_telegram_bot_token
 INSTAGRAM_ACCESS_TOKEN=your_instagram_access_token
-INSTAGRAM_BUSINESS_ID=your_instagram_business_account_id
+INSTAGRAM_PAGE_ID=your_instagram_business_account_id
 ```
 
 ---
@@ -63,9 +63,8 @@ $count = SocialStats::platform('youtube')->fetchCount('UCxxxxxxx'); // Channel I
 // Facebook Page
 $count = SocialStats::platform('facebook')->fetchCount('your_page_id'); // Page ID Number (3127652********)
 
-// Instagram Business Account
-
-$count = SocialStats::platform('instagram')->fetchCount('@handle'); // // No @ symbol
+// Instagram (uses page_id to discover linked Instagram account)
+SocialStats::platform('instagram')->fetchCount();
 ```
 
 > The package uses Laravel’s built-in HTTP and cache systems.
@@ -77,8 +76,8 @@ $count = SocialStats::platform('instagram')->fetchCount('@handle'); // // No @ s
 - ✅ Telegram Channels
 - ✅ YouTube Channels
 - ✅ Facebook Pages
-- ✅ Instagram Business Accounts
-- TikTok (planned)
+- ✅ Instagram Business Accounts (via connected Facebook Page)
+- ⏳ TikTok (planned)
 
 ---
 
