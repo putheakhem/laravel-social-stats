@@ -17,10 +17,12 @@ final class FacebookStatService implements SocialMediaStatService
      */
     public function fetchCount(string $pageId): int
     {
+        /** @var array<int> $cacheTtl */
+        $cacheTtl = config('social-stats.facebook.ttl', 'social-stats.cache.default_ttl');
         $cacheKey = $this->getCacheKey($pageId);
 
         /** @var int $count */
-        $count = Cache::flexible($cacheKey, [18000, 3600], function () use ($pageId): int {
+        $count = Cache::flexible($cacheKey, $cacheTtl, function () use ($pageId): int {
             return $this->getFanCountFromApi($pageId);
         });
 

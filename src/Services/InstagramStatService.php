@@ -19,8 +19,9 @@ final class InstagramStatService implements SocialMediaStatService
      */
     public function fetchCount(?string $handle = null): int
     {
+        /** @var array<int> $cacheTtl */
+        $cacheTtl = config('social-stats.instagram.ttl', 'social-stats.cache.default_ttl');
         $cacheKey = $this->getCacheKey($handle);
-        $cacheTtl = [18000, 3600];
 
         $result = Cache::flexible($cacheKey, $cacheTtl, function () use ($handle): int {
             return $this->getFollowersCountFromApi($handle);

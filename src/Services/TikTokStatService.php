@@ -25,12 +25,12 @@ final class TikTokStatService implements SocialMediaStatService
 
             return 0;
         }
-
+        /** @var array<int> $cacheTtl */
+        $cacheTtl = config('social-stats.tiktok.ttl', 'social-stats.cache.default_ttl');
         $cacheKey = "tiktok_follower_count_{$username}";
-        $ttl = [18000, 3600];
 
         /** @var int $count */
-        $count = Cache::flexible($cacheKey, $ttl, function () use ($username): int {
+        $count = Cache::flexible($cacheKey, $cacheTtl, function () use ($username): int {
             return $this->getFollowerCountFromProfile($username);
         });
 

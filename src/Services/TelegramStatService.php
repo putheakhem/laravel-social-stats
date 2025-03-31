@@ -17,10 +17,12 @@ final class TelegramStatService implements SocialMediaStatService
      */
     public function fetchCount(string $handle): int
     {
+        /** @var array<int> $cacheTtl */
+        $cacheTtl = config('social-stats.telegram.ttl', config('social-stats.cache.default_ttl'));
         $cacheKey = $this->getCacheKey($handle);
 
         /** @var int $count */
-        $count = Cache::flexible($cacheKey, [18000, 3600], function () use ($handle): int {
+        $count = Cache::flexible($cacheKey, $cacheTtl, function () use ($handle): int {
             return $this->getFollowerCountFromApi($handle);
         });
 

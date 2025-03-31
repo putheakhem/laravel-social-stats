@@ -14,13 +14,17 @@ final class YouTubeStatService implements SocialMediaStatService
 {
     /**
      * Fetch the subscriber count for the given YouTube channel ID.
+     *
+     * @param  string  $channelId  The YouTube channel ID.
      */
     public function fetchCount(string $channelId): int
     {
+        /** @var array<int> $cacheTtl */
+        $cacheTtl = config('social-stats.youtube.ttl', 'social-stats.cache.default_ttl');
         $cacheKey = $this->getCacheKey($channelId);
 
         /** @var int $count */
-        $count = Cache::flexible($cacheKey, [18000, 3600], function () use ($channelId): int {
+        $count = Cache::flexible($cacheKey, $cacheTtl, function () use ($channelId): int {
             return $this->getSubscriberCountFromApi($channelId);
         });
 
