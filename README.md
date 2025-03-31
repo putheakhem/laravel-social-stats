@@ -64,7 +64,7 @@ $count = SocialStats::platform('youtube')->fetchCount('UCxxxxxxx'); // Channel I
 $count = SocialStats::platform('facebook')->fetchCount('your_page_id'); // Page ID Number (3127652********)
 
 // Instagram (uses page_id to discover linked Instagram account)
-SocialStats::platform('instagram')->fetchCount();
+SocialStats::platform('instagram')->fetchCount('fintechcenterfsa'); // Instagram username
 ```
 
 > The package uses Laravel’s built-in HTTP and cache systems.
