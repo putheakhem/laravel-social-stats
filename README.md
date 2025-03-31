@@ -13,6 +13,8 @@
     - Telegram Channels
     - YouTube Channels
     - Facebook Pages
+    - Instagram Followers (via connected Facebook Page)
+    - TikTok Followers
 - ⚡ Built Support Laravel 11+ & PHP 8.2+
 - 🔒 Caching with Laravel’s new `Cache::flexible()`
 - 🧹 Facade support: `SocialStats::platform('telegram')`
@@ -65,6 +67,9 @@ $count = SocialStats::platform('facebook')->fetchCount('your_page_id'); // Page 
 
 // Instagram (uses page_id to discover linked Instagram account)
 SocialStats::platform('instagram')->fetchCount('fintechcenterfsa'); // Instagram username
+
+// TikTok
+SocialStats::platform('tiktok')->fetchCount('your_tiktok_username'); // TikTok username
 ```
 
 > The package uses Laravel’s built-in HTTP and cache systems.
@@ -73,11 +78,12 @@ SocialStats::platform('instagram')->fetchCount('fintechcenterfsa'); // Instagram
 
 ## ✅ Supported Platforms
 
-- ✅ Telegram Channels
-- ✅ YouTube Channels
-- ✅ Facebook Pages
-- ✅ Instagram Business Accounts (via connected Facebook Page)
-- ⏳ TikTok (planned)
+- ✅ Telegram Channels Subscribers
+- ✅ YouTube Channels Subscribers
+- ✅ Facebook Page Likes
+- ✅ Instagram Followers (via connected Facebook Page)
+- ✅ TikTok Follower
+- ⏳ Twitter Follower (planned)
 
 ---
 
