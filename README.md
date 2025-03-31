@@ -62,6 +62,10 @@ $count = SocialStats::platform('youtube')->fetchCount('UCxxxxxxx'); // Channel I
 
 // Facebook Page
 $count = SocialStats::platform('facebook')->fetchCount('your_page_id'); // Page ID Number (3127652********)
+
+// Instagram Business Account
+
+$count = SocialStats::platform('instagram')->fetchCount('@handle'); // // No @ symbol
 ```
 
 > The package uses Laravel’s built-in HTTP and cache systems.
@@ -74,7 +78,7 @@ $count = SocialStats::platform('facebook')->fetchCount('your_page_id'); // Page 
 - ✅ YouTube Channels
 - ✅ Facebook Pages
 - ✅ Instagram Business Accounts
--  Instagram, TikTok (planned)
+- TikTok (planned)
 
 ---
 
