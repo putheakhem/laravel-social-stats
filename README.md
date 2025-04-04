@@ -57,13 +57,13 @@ INSTAGRAM_PAGE_ID=your_instagram_business_account_id
 use SocialStats;
 
 // Telegram
-$count = SocialStats::platform('telegram')->fetchCount('your_channel_username'); // No @ symbol
+SocialStats::platform('telegram')->fetchCount('your_channel_username'); // No @ symbol
 
 // YouTube
-$count = SocialStats::platform('youtube')->fetchCount('UCxxxxxxx'); // Channel ID
+SocialStats::platform('youtube')->fetchCount('UCxxxxxxx'); // Channel ID
 
 // Facebook Page
-$count = SocialStats::platform('facebook')->fetchCount('your_page_id'); // Page ID Number (3127652********)
+SocialStats::platform('facebook')->fetchCount('your_page_id'); // Page ID Number (3127652********)
 
 // Instagram (uses page_id to discover linked Instagram account)
 SocialStats::platform('instagram')->fetchCount('fintechcenterfsa'); // Instagram username
