@@ -1,6 +1,7 @@
 # Laravel Social Stats
 
 [![Latest Version](https://img.shields.io/packagist/v/putheakhem/laravel-social-stats.svg?style=flat-square)](https://packagist.org/packages/putheakhem/laravel-social-stats)
+[![Total Downloads](https://img.shields.io/packagist/dt/putheakhem/laravel-social-stats.svg?style=flat-square)](https://packagist.org/packages/putheakhem/laravel-social-stats)
 [![License](https://img.shields.io/github/license/putheakhem/laravel-social-stats.svg?style=flat-square)](LICENSE)
 
 > A Laravel package to fetch follower/subscriber counts from various social media platforms including Telegram, YouTube, and Facebook Pages.
@@ -96,6 +97,11 @@ composer test
 ```
 
 ---
+
+## Support Me
+
+If you find this package useful, consider supporting my work:
+- [Buy me a coffee](https://www.buymeacoffee.com/iamputhea)
 
 ## 📄 License
 
