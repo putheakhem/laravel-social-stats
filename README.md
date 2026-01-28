@@ -4,7 +4,21 @@
 [![Total Downloads](https://img.shields.io/packagist/dt/putheakhem/laravel-social-stats.svg?style=flat-square)](https://packagist.org/packages/putheakhem/laravel-social-stats)
 [![License](https://img.shields.io/github/license/putheakhem/laravel-social-stats.svg?style=flat-square)](LICENSE)
 
-> A Laravel package to fetch follower/subscriber counts from various social media platforms including Telegram, YouTube, and Facebook Pages.
+A Laravel package to fetch follower/subscriber counts from various social media platforms including Telegram, YouTube, and Facebook Pages.
+
+---
+
+<div align="center">
+
+## 🇰🇭 Stand with Cambodia • កម្ពុជា
+
+### 🕊️ Cambodia Needs Peace 🕊️
+
+With heavy hearts, we stand with our brave soldiers defending Cambodia’s land and dignity.  
+We seek no conflict—only peace, justice, and respect for our sovereignty.
+
+**🙏 កម្ពុជាត្រូវការសន្តិភាព • Together to protect Cambodia’s sovereignty.**
+</div>
 
 ---
 
